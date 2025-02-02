@@ -8,11 +8,11 @@ int main() {
     deque<int>maxi(k);
     deque<int>mini(k);
     for(int i=0;i<k;i++){
-        while(!maxi.empty() && arr[maxi.front()] < arr[i]){
-            maxi.pop_front();
+        while(!maxi.empty() && arr[maxi.back()] < arr[i]){
+            maxi.pop_back();
         }
-        while(!mini.empty() && arr[mini.front()] > arr[i]){
-            mini.pop_front();
+        while(!mini.empty() && arr[mini.back()] > arr[i]){
+            mini.pop_back();
         }
         maxi.push_back(i);
         
@@ -29,12 +29,11 @@ int main() {
             mini.pop_front();
         }
         
-        while(!maxi.empty() && arr[maxi.front()] < arr[i]){
-            maxi.pop_front();
+        while(!maxi.empty() && arr[maxi.back()] < arr[i]){
+            maxi.pop_back();
         }
-        
-        while(!mini.empty() && arr[mini.front()] > arr[i]){
-            mini.pop_front();
+        while(!mini.empty() && arr[mini.back()] > arr[i]){
+            mini.pop_back();
         }
         
         maxi.push_back(i);
